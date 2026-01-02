@@ -1,0 +1,6 @@
+@Round2Api_HostAddress = http://localhost:5068
+
+GET {{Round2Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

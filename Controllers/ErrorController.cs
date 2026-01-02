@@ -1,0 +1,17 @@
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Round2Api.Errors;
+
+namespace Round2Api.Controllers
+{
+    [Route("errors/{code}")]
+    [ApiController]
+    [ApiExplorerSettings(IgnoreApi = true)]
+    public class ErrorController : ControllerBase
+    {
+        public ActionResult Error(int code)
+        {
+            return NotFound(new ApiResponse(code));
+        }
+    }
+}
